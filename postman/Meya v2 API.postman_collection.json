@@ -1,0 +1,187 @@
+{
+	"info": {
+		"_postman_id": "b3385416-ce48-4565-84ce-05e02d8f40a8",
+		"name": "Meya v2 API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "5623939"
+	},
+	"item": [
+		{
+			"name": "say",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"entry\": {\n    \"type\": \"meya.text.event.say\",\n    \"data\": {\n      \"text\": \"Hi\"\n    }\n  },\n  \"user\": {\n    \"id\": \"123\"\n  },\n  \"thread\": {\n    \"id\": \"123\"\n  }\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://grid.meya.ai/gateway/v2/webhook/{{app_id}}/{{integration_id}}",
+					"protocol": "https",
+					"host": [
+						"grid",
+						"meya",
+						"ai"
+					],
+					"path": [
+						"gateway",
+						"v2",
+						"webhook",
+						"{{app_id}}",
+						"{{integration_id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "twilio",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"entry\": {\n    \"type\": \"meya.lifecycle.event.event\",\n    \"data\": {\n      \"lifecycle_id\": \"try_me\"\n    }\n  },\n  \"integration_id\": \"integration.twilio\",\n  \"user\": {\n    \"id\": \"+12268084934\"\n  },\n  \"thread\": {\n    \"id\": \"+12268084934\"\n  }\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://grid.meya.ai/gateway/v2/webhook/{{app_id}}/{{integration_id}}",
+					"protocol": "https",
+					"host": [
+						"grid",
+						"meya",
+						"ai"
+					],
+					"path": [
+						"gateway",
+						"v2",
+						"webhook",
+						"{{app_id}}",
+						"{{integration_id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "lifecycle",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"entry\": {\n    \"type\": \"meya.lifecycle.event.event\",\n    \"data\": {\n      \"lifecycle_id\": \"try_me\"\n    }\n  },\n  \"user\": {\n    \"id\": \"123\"\n  },\n  \"thread\": {\n    \"id\": \"123\"\n  }\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://grid.meya.ai/gateway/v2/webhook/{{app_id}}/{{integration_id}}",
+					"protocol": "https",
+					"host": [
+						"grid",
+						"meya",
+						"ai"
+					],
+					"path": [
+						"gateway",
+						"v2",
+						"webhook",
+						"{{app_id}}",
+						"{{integration_id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "simulator",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"entry\": {\n    \"type\": \"meya.text.event.say\",\n    \"data\": {\n      \"text\": \"Hi from a bot API\",\n      \"user_id\": \"u-a5a0a2de417f4724bc0c6b032642fcd9\",\n      \"thread_id\": \"t-41c8561c3df140d2888773a49a1d959a\",\n      \"integration_id\": \"meya\"\n    }\n  },\n  \"user\": {\n    \"id\": \"x\"\n  },\n  \"thread\": {\n    \"id\": \"x\"\n  }\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://grid.meya.ai/gateway/v2/webhook/{{app_id}}/{{integration_id}}",
+					"protocol": "https",
+					"host": [
+						"grid",
+						"meya",
+						"ai"
+					],
+					"path": [
+						"gateway",
+						"v2",
+						"webhook",
+						"{{app_id}}",
+						"{{integration_id}}"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "basic",
+		"basic": [
+			{
+				"key": "password",
+				"value": "YOUR_PASSWORD_HERE",
+				"type": "string"
+			},
+			{
+				"key": "username",
+				"value": "meya",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "integration_id",
+			"value": "integration.webhook"
+		},
+		{
+			"key": "app_id",
+			"value": "app-YOUR_APP_ID"
+		}
+	]
+}
