@@ -2,4 +2,4 @@ triggers:
   - keyword: hi
 
 steps:
-  - say: Hello!
+  - say: Hello! 👋
