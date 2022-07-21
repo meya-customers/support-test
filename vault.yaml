@@ -1,0 +1,6 @@
+webhook.postback_url: xxx
+webhook.api_key: xxx
+twilio.account_sid: xxx
+twilio.api_key_secret: xxx
+twilio.api_key_sid: xxx
+twilio.phone_number: xxx

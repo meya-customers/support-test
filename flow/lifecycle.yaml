@@ -1,0 +1,5 @@
+triggers:
+  - lifecycle_id: try_me
+
+steps:
+  - say: This was sent from lifecycle flow

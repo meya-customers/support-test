@@ -1,0 +1,8 @@
+type: meya.webhook.integration
+api_key: (@ vault.webhook.api_key )
+postback_url: (@ vault.webhook.postback_url )
+suppress_echo: false
+#filter:
+#  tx: false
+filter:
+  tx: meya.event.entry.interactive
