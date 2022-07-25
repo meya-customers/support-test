@@ -1,0 +1,14 @@
+triggers:
+  - keyword: log_error_test
+
+steps:
+  - say: Testing a log entry first...
+  # generate a log entry
+  - type: component.log
+    message: This is a log
+    context:
+      alpha: go
+      beta: no
+  - say: '...and now an exception entry.'
+  # generate an exception entry
+  - type: component.error

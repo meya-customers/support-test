@@ -1,0 +1,9 @@
+type: log.custom
+inspector_url: https://requestinspector.com/inspect/01g8v3f4jmj85c7wev3cmx0zzy
+entry_types:
+  - meya.text.event.say
+  - meya.button.event.click
+  - meya.text.event.ask
+  - meya.text.event.say
+  - meya.log.entry.message
+  - meya.log.entry.exception
